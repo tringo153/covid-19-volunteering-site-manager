@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MapsActivity"
+    android:orientation="vertical">
+
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <Button
+        android:id="@+id/buttonCancelRoute"
+        android:layout_width="223dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="94dp"
+        android:layout_marginEnd="93dp"
+        android:layout_marginBottom="15dp"
+        android:onClick="onRouteCancel"
+        android:text="Cancel Routing" />
+
+    <SearchView
+        android:id="@+id/sv_location"
+        android:layout_width="339dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/white"
+        android:elevation="5dp"
+        android:iconifiedByDefault="false"
+        android:queryHint="Search...">
+
+    </SearchView>
+
+    <ListView
+        android:id="@+id/list_result"
+        android:layout_width="match_parent"
+        android:layout_height="166dp"
+        android:layout_below="@+id/sv_location"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/white"
+        android:dividerHeight="1dp"
+        android:padding="10dp">
+
+    </ListView>
+
+    <ListView
+        android:id="@+id/list_result_none"
+        android:layout_width="match_parent"
+        android:layout_height="166dp"
+        android:layout_below="@+id/sv_location"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/white"
+        android:dividerHeight="1dp"
+        android:padding="10dp" />
+
+    <TextView
+        android:id="@+id/noRecordTextSite2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sv_location"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="No matching results"
+        android:textSize="24sp"
+        android:visibility="invisible"
+        map:layout_constraintEnd_toEndOf="parent"
+        map:layout_constraintStart_toStartOf="parent"
+        map:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/buttonFilter"
+        android:layout_width="57dp"
+        android:layout_height="57dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="10dp"
+        android:onClick="onFilterApply"
+        android:src="@android:drawable/ic_dialog_dialer" />
+
+
+</RelativeLayout>
