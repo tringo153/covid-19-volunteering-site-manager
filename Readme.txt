@@ -1,11 +1,6 @@
-Student Id: s3818520
-Student Name: Ngo Huu Tri
-
 App Functionality:
 	
-	- Sign in
-	- Log in
-	- Map view showing nearby location
+	- Google Map view showing nearby location
 	- Create new site (become a leader of that site)
 	- Update site (leader of a site can change information of that site)
 	- Join a site
